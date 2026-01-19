@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base:9.1.0
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base-debian
 
 ###############################################################################
 # Get prebuild containers from Vaultwarden
@@ -24,7 +24,7 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        libmariadb-dev-compat \
+        libmariadb3 \
         libpq5 \
         nginx \
         sqlite3 \
@@ -45,7 +45,7 @@ ARG BUILD_ARCH=aarch64
 ARG BUILD_REPOSITORY=mariorasch/ha-add-ons
 ARG BUILD_DATE
 ARG BUILD_REV=1
-ARG BUILD_VERSION=1.0.3
+ARG BUILD_VERSION=1.0.4
 
 # Labels
 LABEL \
