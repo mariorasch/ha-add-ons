@@ -1,3 +1,8 @@
+# 1.0.6
+
+- Fix option "request_size_limit" in config.yaml.
+- Remove mapping for "ssl" folder.
+
 # 1.0.5
 
 - Update Dockerfile to only install dependencies necessary to run this app using SQLite.
