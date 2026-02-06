@@ -1,0 +1,23 @@
+---
+name: Vaultwarden
+version: "1.0.5"
+slug: vaultwarden
+description: Open source password management solution based on Vaultwarden
+url: https://github.com/mariorasch/ha-apps/app-vaultwarden
+webui: "[PROTO:ssl]://[HOST]:[PORT:7277]"
+init: false
+arch:
+  - aarch64
+ports:
+  7277/tcp: 7277
+ports_description:
+  7277/tcp: Vaultwarden web interface & REST API
+map:
+  - ssl
+options:
+  log_level: info
+  request_size_limit:
+schema:
+  log_level: list(trace|debug|info|warning|error|off)?
+  request_size_limit: int?
+image: "ghcr.io/mariorasch/ha-apps/app-vaultwarden"

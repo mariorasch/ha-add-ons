@@ -1,4 +1,4 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Home Assistant Add-ons by Mario Rasch
-url: 'https://github.com/mariorasch/ha-add-ons'
+# https://developers.home-assistant.io/docs/apps/repository#repository-configuration
+name: Home Assistant Apps by Mario Rasch
+url: "https://github.com/mariorasch/ha-apps"
 maintainer: Mario Rasch <mario.rasch@web.de>

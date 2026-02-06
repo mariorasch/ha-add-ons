@@ -1,0 +1,13 @@
+# 1.0.5
+
+- Update Dockerfile to only install dependencies necessary to run this app using SQLite.
+- Clean up rootfs contents to only contain necessary files and directories to let Vaultwarden run locally without SSL / HTTPS. SSL / HTTPS should be setup by making Vaultwarden available externally.
+- Update documentation.
+
+# 1.0.4
+
+Change base image to ghcr.io/home-assistant/aarch64-base-debian.
+
+# 1.0.3
+
+Initial version based on [Vaultwarden](https://github.com/dani-garcia/vaultwarden) 1.35.2.
