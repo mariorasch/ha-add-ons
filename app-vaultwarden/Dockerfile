@@ -6,6 +6,8 @@ FROM ${BUILD_FROM}
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Install Vaultwarden dependencies libmariadb3, libpq5 and sqlite3.
+#
 # Remove lists directory for smaller image size and
 # remove /etc/nginx after installation so that it does
 # not interfere with configuration copied from rootfs.
@@ -13,6 +15,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
+    libmariadb3 \
+    libpq5 \
     nginx \
     sqlite3 \
     && apt-get clean \
@@ -29,7 +33,7 @@ ARG BUILD_ARCH=aarch64
 ARG BUILD_REPOSITORY=mariorasch/ha-apps
 ARG BUILD_DATE
 ARG BUILD_REV=1
-ARG BUILD_VERSION=1.0.6
+ARG BUILD_VERSION=1.0.7
 
 LABEL \
     io.hass.name="${BUILD_NAME}" \

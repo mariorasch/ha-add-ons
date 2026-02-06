@@ -1,3 +1,7 @@
+# 1.0.7
+
+Update Dockerfile to install necessary Vaultwarden dependencies.
+
 # 1.0.6
 
 - Fix option "request_size_limit" in config.yaml.
