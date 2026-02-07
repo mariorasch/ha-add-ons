@@ -50,12 +50,12 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /opt/web-vault/** r,
 
     # Network socket access
-    network inet stream,
-    network inet dgram,
+    network inet tcp,
+    network inet udp,
 
     # Process access
     /proc/1/fd/1 w,
-    /run/vaultwarden.pid wrc,
+    /run/vaultwarden.pid rw,
 
     # File access
     /bin/bash rix,
@@ -70,7 +70,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
 
     # System information
     /proc/*/cgroup r,
-    /proc/*/mountinfo ri,
+    /proc/*/mountinfo r,
     /proc/net/netlink r,
     /proc/sys/kernel/osrelease r,
     /proc/sys/net/core/somaxconn r,
@@ -108,12 +108,12 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /etc/nginx/** r,
 
     # Network socket access
-    network inet stream,
-    network inet dgram,
+    network inet tcp,
+    network inet udp,
 
     # Process access
     /proc/1/fd/1 w,
-    /run/nginx.pid wrc,
+    /run/nginx.pid rw,
 
     # File access
     /bin/bash rix,
@@ -123,11 +123,11 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /etc/passwd r,
     /etc/nsswitch.conf r,
     /etc/ssl/openssl.cnf r,
-    /var/lib/nginx/body/ c,
-    /var/lib/nginx/fastcgi/ c,
-    /var/lib/nginx/proxy/ c,
-    /var/lib/nginx/scgi/ c,
-    /var/lib/nginx/uwsgi/ c,
+    /var/lib/nginx/body/ rw,
+    /var/lib/nginx/fastcgi/ rw,
+    /var/lib/nginx/proxy/ rw,
+    /var/lib/nginx/scgi/ rw,
+    /var/lib/nginx/uwsgi/ rw,
 
     # System information
     /proc/net/netlink r,
