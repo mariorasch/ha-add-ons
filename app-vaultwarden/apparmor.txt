@@ -38,7 +38,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay
-    signal (receive) peer=vaultwarden,
+    signal (receive) peer=*_vaultwarden,
 
     # Capabilities
     capability net_bind_service,
@@ -84,7 +84,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay
-    signal (receive) peer=vaultwarden,
+    signal (receive) peer=*_vaultwarden,
 
     # Nginx binary and configuration
     /usr/sbin/nginx r,

@@ -1,3 +1,7 @@
+# 1.0.9
+
+Update apparmor.txt.
+
 # 1.0.8
 
 Update apparmor.txt, config.yaml and documentation.
