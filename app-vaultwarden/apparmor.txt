@@ -4,6 +4,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   # Capabilities
+  capability,
   file,
   signal (send) set=(kill,term,int,hup,cont),
 
@@ -98,9 +99,9 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     ptrace (read),
 
     # Capabilities
-    dac_override,
-    setgid,
-    setuid,
+    capability dac_override,
+    capability setgid,
+    capability setuid,
 
     # Nginx binary and configuration
     /usr/sbin/nginx rm,
