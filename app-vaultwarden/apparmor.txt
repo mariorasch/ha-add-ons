@@ -23,8 +23,8 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
   /dev/tty rw,
 
   # Bashio
-  /usr/lib/bashio/** ix,
   /tmp/** rwk,
+  /usr/lib/bashio/** ix,
 
   # Access to app configuration
   /data/ r,
@@ -45,7 +45,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     # Capabilities
     capability net_bind_service,
 
-    # Vaultwarden binary and web vault
+    # Vaultwarden binary and Web UI
     /opt/vaultwarden rm,
     /opt/web-vault/** r,
 
@@ -57,27 +57,27 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /proc/1/fd/1 w,
     /run/vaultwarden.pid rw,
 
-    # File access
+    # File file access
     /bin/bash rix,
     /bin/echo ix,
     /dev/null rw,
     /dev/tty rw,
+    /dev/urandom r,
     /etc/passwd r,
     /etc/ssl/openssl.cnf r,
     /etc/ssl/certs/ca-certificates.crt r,
-    /dev/urandom r,
     /usr/bin/openssl rix,
 
     # System information
-    /proc/*/cgroup r,
-    /proc/*/mountinfo r,
+    owner /proc/*/cgroup r,
+    owner /proc/*/mountinfo r,
     /proc/net/netlink r,
     /proc/sys/kernel/osrelease r,
     /proc/sys/net/core/somaxconn r,
     /proc/sys/net/ipv4/tcp_tw_reuse r,
     /sys/fs/cgroup/cpu.max r,
 
-    # Work directory, attachments, configuration, SQLite database access, icon cache & temporary files
+    # Vaultwarden file access
     /data/ r,
     /data/attachments/** rw,
     /data/config.json rw,
@@ -115,7 +115,7 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /proc/1/fd/1 w,
     /run/nginx.pid rw,
 
-    # File access
+    # System file access
     /bin/bash rix,
     /dev/null rw,
     /dev/tty rw,
@@ -123,11 +123,6 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /etc/passwd r,
     /etc/nsswitch.conf r,
     /etc/ssl/openssl.cnf r,
-    /var/lib/nginx/body/ rw,
-    /var/lib/nginx/fastcgi/ rw,
-    /var/lib/nginx/proxy/ rw,
-    /var/lib/nginx/scgi/ rw,
-    /var/lib/nginx/uwsgi/ rw,
 
     # System information
     /proc/net/netlink r,
@@ -135,8 +130,13 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
     /proc/sys/net/core/somaxconn r,
     /proc/sys/net/ipv4/tcp_tw_reuse r,
 
-    # Work directory, Temporary files
+    # Nginx file access
     /data/ r,
     /tmp/** rw,
+    /var/lib/nginx/body/** rw,
+    /var/lib/nginx/fastcgi/** rw,
+    /var/lib/nginx/proxy/** rw,
+    /var/lib/nginx/scgi/** rw,
+    /var/lib/nginx/uwsgi/** rw,
   }
 }
