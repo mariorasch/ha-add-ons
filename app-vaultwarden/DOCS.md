@@ -33,7 +33,7 @@ To fix this warning do the following:
 1. Add the "**Advanced SSH & Web Terminal**" app to Home Assistant, be sure to disable "**Protection mode**" and start this app.
 2. Click the "Open Web UI" button to open a terminal.
 3. Execute `docker ps | grep vaultwarden` to display details of the Docker container that runs Vaultwarden.
-4. Execute `docker exec -it <container name> sh -c "/opt/vaultwarden hash"`. Replace `<container name>` with the name being displayed at end of line of output in step 3.
+4. Execute `docker exec -it <container name> /opt/vaultwarden hash`. Replace `<container name>` with the name being displayed at end of line of output in step 3.
 5. Enter a secure admin token (= password) of your choice twice.
 6. Log in to Vaultwarden's admin panel, enter the generated admin token value (i.e. the string that begins with "$argon2", without the quotes) under General -> "Admin token/Argon2 PHC" and save your configuration.
 

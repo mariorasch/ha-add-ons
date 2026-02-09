@@ -1,3 +1,8 @@
+# 1.0.21
+
+- Limit Vaultwarden & Nginx to tcp traffic in AppArmor.
+- Update documentation.
+
 # 1.0.20
 
 Fix directory access for Nginx in AppArmor.

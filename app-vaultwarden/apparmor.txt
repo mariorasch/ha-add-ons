@@ -51,7 +51,6 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
 
     # Network socket access
     network inet tcp,
-    network inet udp,
 
     # Process access
     /proc/1/fd/1 w,
@@ -109,7 +108,6 @@ profile vaultwarden flags=(attach_disconnected,mediate_deleted) {
 
     # Network socket access
     network inet tcp,
-    network inet udp,
 
     # Process access
     /proc/1/fd/1 w,
