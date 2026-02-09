@@ -1,3 +1,7 @@
+# 1.0.22
+
+- Allow udp traffic for Vaultwarden in AppArmor.
+
 # 1.0.21
 
 - Limit Vaultwarden & Nginx to tcp traffic in AppArmor.
