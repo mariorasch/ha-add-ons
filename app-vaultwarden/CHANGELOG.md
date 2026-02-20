@@ -1,3 +1,7 @@
+# 1.0.28
+
+Use host instead of IP.
+
 # 1.0.27
 
 - Add IPv6 support.
