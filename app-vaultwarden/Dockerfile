@@ -20,8 +20,8 @@ RUN \
     nginx \
     sqlite3 \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && rm -rf /etc/nginx
+    && rm -rf /etc/nginx \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY rootfs /
 COPY --from=vaultwarden /vaultwarden /opt/vaultwarden
@@ -33,7 +33,7 @@ ARG BUILD_ARCH=aarch64
 ARG BUILD_REPOSITORY=mariorasch/ha-apps
 ARG BUILD_DATE
 ARG BUILD_REV=1
-ARG BUILD_VERSION=1.0.26
+ARG BUILD_VERSION=1.0.27
 
 LABEL \
     io.hass.name="${BUILD_NAME}" \

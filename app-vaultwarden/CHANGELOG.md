@@ -1,14 +1,19 @@
+# 1.0.27
+
+- Add IPv6 support.
+- Change Web-UI URL to /admin and use IP instead of host.
+
 # 1.0.26
 
-- Update icon & logo.
+Update icon & logo.
 
 # 1.0.25
 
-- Update AppArmor.
+Update AppArmor.
 
 # 1.0.24
 
-- Update AppArmor.
+Update AppArmor.
 
 # 1.0.23
 
@@ -17,7 +22,7 @@
 
 # 1.0.22
 
-- Allow udp traffic for Vaultwarden in AppArmor.
+Allow udp traffic for Vaultwarden in AppArmor.
 
 # 1.0.21
 
