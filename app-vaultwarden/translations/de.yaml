@@ -1,0 +1,14 @@
+---
+configuration:
+  log_level:
+    name: Log-Level
+    description: >-
+      Kontrolliert den Detailgrad der Logeinträge, die die App bereitstellt.
+  request_size_limit:
+    name: Größenbeschränkung für HTTP-Anfragen an die REST-API
+    description: >-
+      Optional kann die Größe der HTTP-Anfragen an die REST-API von Vaultwarden
+      festgelegt werden. Dies kann z.B. nötig sein, um größere Importe oder Anhänge
+      zu unterstützen. Der Standardwert ist 10485760, was 10MB entspricht.
+network:
+  7277/tcp: Port für den Zugriff auf die Web UI und die REST-API von Vaultwarden.

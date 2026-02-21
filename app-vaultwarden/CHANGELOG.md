@@ -1,3 +1,7 @@
+# 1.0.29
+
+Add German translation.
+
 # 1.0.28
 
 Use host instead of IP.
