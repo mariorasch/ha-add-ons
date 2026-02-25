@@ -19,8 +19,8 @@ Therefore, after this initial installation you need to follow the steps at [Make
 2. Click the "Install" button to install the app.
 3. Start the "Vaultwarden" app.
 4. Check the logs of the "Vaultwarden" app to see if everything went well and to get the admin token.
-5. Click the "Open Web UI" button to open Vaultwarden.
-6. Add `/admin` to the URL to access the admin panel, e.g., `http://homeassistant.local:7277/admin`. Log in using the admin token you got in step 4.
+5. Click the "Open Web UI" button to open Vaultwarden admin panel.
+6. Log in to admin panel using the admin token you got in step 4.
 7. Be sure to store your admin token in a safe place.
 8. The admin token in the logs **is only shown on app start until you saved Vaultwarden's configuration** in admin panel.
 

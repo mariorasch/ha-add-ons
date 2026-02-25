@@ -1,3 +1,8 @@
+# 1.0.30
+
+- Update to [Vaultwarden](https://github.com/dani-garcia/vaultwarden) 1.35.4.
+- Update documentation.
+
 # 1.0.29
 
 Add German translation.
