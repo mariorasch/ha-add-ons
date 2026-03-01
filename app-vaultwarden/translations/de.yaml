@@ -11,4 +11,4 @@ configuration:
       festgelegt werden. Dies kann z.B. nötig sein, um größere Importe oder Anhänge
       zu unterstützen. Der Standardwert ist 10485760, was 10MB entspricht.
 network:
-  7277/tcp: Port für den Zugriff auf die Web UI und die REST-API von Vaultwarden.
+  7277/tcp: Port für den Zugriff auf die REST-API und das Web-UI von Vaultwarden.

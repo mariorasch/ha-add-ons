@@ -1,3 +1,9 @@
+# 1.0.31
+
+- Update documentation.
+- Update images.
+- Update translations.
+
 # 1.0.30
 
 - Update to [Vaultwarden](https://github.com/dani-garcia/vaultwarden) 1.35.4.
@@ -14,7 +20,7 @@ Use host instead of IP.
 # 1.0.27
 
 - Add IPv6 support.
-- Change Web-UI URL to /admin and use IP instead of host.
+- Change Web UI URL to /admin and use IP instead of host.
 
 # 1.0.26
 
